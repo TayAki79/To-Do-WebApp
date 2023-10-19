@@ -1,12 +1,12 @@
-import express from 'express';
-import ejs from 'ejs';
-import fs from 'fs';
-import path from 'path';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = dirname(fileURLToPath(import.meta.url))
+import express from "express";
+import ejs from "ejs";
+import fs from "fs";
+import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const app = express()
+const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
@@ -16,8 +16,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
-})
+  res.render("index.ejs");
+});
 
 app.get("/generate", (req, res) => {
   ejs.renderFile(
@@ -63,5 +63,5 @@ app.get("/generate", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Listening to port ${port}!`);
-})
+  console.log(`Listening to port ${port}!`);
+});
