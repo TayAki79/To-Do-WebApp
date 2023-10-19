@@ -3,9 +3,9 @@
   --li-wht: #ffffff;
   --main-element-divs: hsla(0, 0%, 0%, 0.2);
   --text-boxes-wht: #ffffff;
-  --unchkd-chkbox-outter: #97cde8;
+  --unchkd-chkbox-outer: #97cde8;
   --unchkd-chkbox-inner: #ffffff;
-  --chkd-chkbox-outter: #97cde8;
+  --chkd-chkbox-outer: #97cde8;
   --chkd-chkbox-inner: #0272a4;
   --addbox-circle: #97cde8;
   --addbox-x: #ffffff;
@@ -33,6 +33,12 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body > img {
   width: 100%;
   height: 100vh;
@@ -45,6 +51,7 @@ li {
 
 /* Header Element */
 header {
+  width: 100%;
   height: 4.1875rem;
   background-color: var(--main-element-divs);
   position: relative;
@@ -67,20 +74,80 @@ header ul {
   justify-content: space-between;
 }
 
-
 header svg {
   width: 2.1875rem;
   height: 1.9375rem;
   fill: white;
 }
 
+/* Main Styling */
+main {
+  width: 21.6875rem;
+  max-width: 21.6875rem;
+  height: 34rem;
+  max-height: 39.6875rem;
+  background-color: var(--main-element-divs);
+  font-family: var(--ff-montserrat);
+  color: var(--fc-wht);
+  position: relative;
+  top: 0.8rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.0625rem;
+}
+
+main h1 {
+  font-family: var(--ff-lobster);
+  font-size: var(--fs-28);
+}
+
+.tasks {
+  margin-block: 1.125rem;
+  color: var(--fc-blk);
+}
+
+.task-item {
+  width: 19.5625rem;
+  height: 3rem;
+  background-color: var(--text-boxes-wht);
+  border-radius: 0.625rem;
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.unchecked-checkbox-outer {
+  width: 1.475rem;
+  height: 1.475rem;
+  background-color: var(--unchkd-chkbox-outer);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.unchecked-checkbox-inner {
+  width: 0.975rem;
+  height: 0.975rem;
+  background-color: var(--unchkd-chkbox-inner);
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Footer Styling */
 footer {
   width: 100%;
-  height: 2.625rem;
+  height: 2rem;
   background-color: var(--main-element-divs);
   position: absolute;
   bottom: 0;
   font-family: var(--ff-montserrat);
+  font-size: 0.5rem;
   color: var(--fc-wht);
   display: flex;
   justify-content: center;
