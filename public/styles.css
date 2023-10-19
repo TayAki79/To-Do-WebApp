@@ -21,8 +21,8 @@
   --fs-16: 1rem;
 
   /* Font Families */
-  --ff-lobster: 'Lobster';
-  --ff-montserrat: 'Montserrat', sans-serif;
+  --ff-lobster: "Lobster";
+  --ff-montserrat: "Montserrat", sans-serif;
 }
 
 *,
@@ -39,16 +39,39 @@ body > img {
   position: absolute;
 }
 
-header,
-main,
-footer {
-  position: relative;
+li {
+  list-style: none;
 }
 
+/* Header Element */
 header {
   height: 4.1875rem;
   background-color: var(--main-element-divs);
   position: relative;
+}
+
+nav {
+  width: 100%;
+  font-family: var(--ff-lobster);
+  font-size: var(--fs-28);
+  color: var(--fc-wht);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+header ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+header svg {
+  width: 2.1875rem;
+  height: 1.9375rem;
+  fill: white;
 }
 
 footer {
@@ -57,7 +80,9 @@ footer {
   background-color: var(--main-element-divs);
   position: absolute;
   bottom: 0;
-  font-family: var(--ff-lobster);
+  font-family: var(--ff-montserrat);
   color: var(--fc-wht);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
