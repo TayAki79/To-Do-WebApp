@@ -1,0 +1,23 @@
+:root {
+  /* Element Colors */
+  --li-wht: #ffffff;
+  --main-element-divs: hsla(0 0 0 0.2);
+  --text-boxes-wht: #ffffff;
+  --unchkd-chkbox-outter: #97cde8;
+  --unchkd-chkbox-inner: #ffffff;
+  --chkd-chkbox-outter: #97cde8;
+  --chkd-chkbox-inner: #0272a4;
+  --addbox-circle: #97cde8;
+  --addbox-x: #ffffff;
+
+  /* Fonts Styling */
+  /* Fonts Colors */
+  --fc-wht: #ffffff;
+  --fc-blk: #000000;
+
+  /* Fonts Sizes */
+  --fs-28: 1.75rem;
+  --fs-24: 1.5rem;
+  --fs-16: 1rem;
+}
+
