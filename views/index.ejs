@@ -1,8 +1,6 @@
 <%- include("partials/header.ejs")%>
 
 <h1>
-  <%# const options1 = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; %>
-  <%# const date1 = new Date(2012, 5); %>
   <% const date = new Date(); %>
   <% const option = {year: 'numeric', month: 'long', day: 'numeric'} %>
   <%= new Intl.DateTimeFormat('de-DE', option).format(date) %>
