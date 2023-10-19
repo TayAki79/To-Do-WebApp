@@ -1,7 +1,7 @@
 :root {
   /* Element Colors */
   --li-wht: #ffffff;
-  --main-element-divs: hsla(0 0 0 0.2);
+  --main-element-divs: hsla(0, 0%, 0%, 0.2);
   --text-boxes-wht: #ffffff;
   --unchkd-chkbox-outter: #97cde8;
   --unchkd-chkbox-inner: #ffffff;
@@ -19,6 +19,10 @@
   --fs-28: 1.75rem;
   --fs-24: 1.5rem;
   --fs-16: 1rem;
+
+  /* Font Families */
+  --ff-lobster: 'Lobster';
+  --ff-montserrat: 'Montserrat', sans-serif;
 }
 
 *,
@@ -29,3 +33,31 @@
   padding: 0;
 }
 
+body > img {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+header,
+main,
+footer {
+  position: relative;
+}
+
+header {
+  height: 4.1875rem;
+  background-color: var(--main-element-divs);
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  height: 2.625rem;
+  background-color: var(--main-element-divs);
+  position: absolute;
+  bottom: 0;
+  font-family: var(--ff-lobster);
+  color: var(--fc-wht);
+  text-align: center;
+}
