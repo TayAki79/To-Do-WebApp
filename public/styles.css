@@ -33,17 +33,23 @@
   padding: 0;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
+  height: 100%;
+  background-image: url(/images/1920-green-grass-field-with-blue-sky-ad-white-cloud-nature-landscape-background.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 body > img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  position: absolute;
 }
 
 li {
@@ -55,7 +61,6 @@ header {
   width: 100%;
   height: 4.1875rem;
   background-color: var(--main-element-divs);
-  position: relative;
 }
 
 nav {
@@ -83,7 +88,11 @@ header svg {
 }
 
 /* Main Styling */
-main {
+.main-wrapper {
+  height: 725px;
+}
+
+.main-wrapper {
   width: 21.6875rem;
   max-width: 21.6875rem;
   height: 34rem;
@@ -91,7 +100,6 @@ main {
   background-color: var(--main-element-divs); /* change bg-color */
   font-family: var(--ff-montserrat);
   color: var(--fc-wht);
-  position: relative;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -198,8 +206,8 @@ main h1 {
 footer {
   width: 100%;
   height: 2rem;
+  min-height: 2rem;
   background-color: var(--main-element-divs);
-  position: absolute;
   bottom: 0;
   font-family: var(--ff-montserrat);
   font-size: 0.5rem;
