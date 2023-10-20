@@ -1,66 +1,68 @@
 <%- include("partials/header.ejs")%>
 
 <main>
-  <h1>
-    <% const date = new Date(); %> <% const option = {year: 'numeric', month:
-    'long', day: 'numeric'} %> <%= new Intl.DateTimeFormat('de-DE',
-    option).format(date) %>
-  </h1>
-  <div class="tasks">
-    <ul>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="unchecked-checkbox-inner"></div>
-        </div>
-        <p>Task 1</p>
-      </li>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="unchecked-checkbox-inner"></div>
-        </div>
-        <p>Task 2</p>
-      </li>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="unchecked-checkbox-inner"></div>
-        </div>
-        <p>Task 3</p>
-      </li>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="unchecked-checkbox-inner"></div>
-        </div>
-        <p>Task 4</p>
-      </li>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="checked-checkbox-inner"></div>
-        </div>
-        <p class="crossed">Task 5</p>
-      </li>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="checked-checkbox-inner"></div>
-        </div>
-        <p class="crossed">Task 6</p>
-      </li>
-      <li class="task-item">
-        <div class="unchecked-checkbox-outer">
-          <div class="checked-checkbox-inner"></div>
-        </div>
-        <p class="crossed">Task 7</p>
-      </li>
-    </ul>
-    <div class="task-input">
-      <input
-        type="text"
-        name="task-name"
-        placeholder="What's your today's goal?"
-      />
-      <div class="add-symbol">
-        <div class="circle">
-          <div class="horizontal-line"></div>
-          <div class="vertical-line"></div>
+  <div class="main-wrapper">
+    <h1>
+      <% const date = new Date(); %> <% const option = {year: 'numeric', month:
+      'long', day: 'numeric'} %> <%= new Intl.DateTimeFormat('de-DE',
+      option).format(date) %>
+    </h1>
+    <div class="tasks">
+      <ul>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="unchecked-checkbox-inner"></div>
+          </div>
+          <p>Task 1</p>
+        </li>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="unchecked-checkbox-inner"></div>
+          </div>
+          <p>Task 2</p>
+        </li>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="unchecked-checkbox-inner"></div>
+          </div>
+          <p>Task 3</p>
+        </li>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="unchecked-checkbox-inner"></div>
+          </div>
+          <p>Task 4</p>
+        </li>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="checked-checkbox-inner"></div>
+          </div>
+          <p class="crossed">Task 5</p>
+        </li>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="checked-checkbox-inner"></div>
+          </div>
+          <p class="crossed">Task 6</p>
+        </li>
+        <li class="task-item">
+          <div class="unchecked-checkbox-outer">
+            <div class="checked-checkbox-inner"></div>
+          </div>
+          <p class="crossed">Task 7</p>
+        </li>
+      </ul>
+      <div class="task-input">
+        <input
+          type="text"
+          name="task-name"
+          placeholder="What's your today's goal?"
+        />
+        <div class="add-symbol">
+          <div class="circle">
+            <div class="horizontal-line"></div>
+            <div class="vertical-line"></div>
+          </div>
         </div>
       </div>
     </div>
