@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+// Generating an index.html file for github
 app.get("/generate", (req, res) => {
   ejs.renderFile(
     path.join(__dirname, "views", "partials", "header.ejs"),
