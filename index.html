@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="public/styles.css" />
     <script src="no-rotate.js" defer></script>
   </head>
-  <body style="background-image: url(public/images/1920-green-grass-field-with-blue-sky-ad-white-cloud-nature-landscape-background.jpg);">
+  <body
+    style="
+      background-image: url(public/images/1920-green-grass-field-with-blue-sky-ad-white-cloud-nature-landscape-background.jpg);
+    "
+  >
     <header>
       <nav>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -30,7 +34,14 @@
     </header>
     <main>
       <div class="main-wrapper">
-        <h1>19. Oktober 2023</h1>
+        <div class="today-title">
+      <h1>
+        Today's Tasks!
+      </h1>
+      <h2>
+        20. Oktober 2023
+      </h2>
+    </div>
         <div class="tasks">
           <ul>
             <li class="task-item">
@@ -82,12 +93,10 @@
               name="task-name"
               placeholder="What's your today's goal?"
             />
-            <div class="add-symbol">
-              <div class="circle">
-                <div class="horizontal-line"></div>
-                <div class="vertical-line"></div>
-              </div>
-            </div>
+            <button type="submit">
+              <div class="horizontal-line"></div>
+              <div class="vertical-line"></div>
+            </button>
           </div>
         </div>
       </div>

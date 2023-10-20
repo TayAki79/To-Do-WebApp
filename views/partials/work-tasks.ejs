@@ -1,9 +1,7 @@
-<%- include("partials/header.ejs")%>
-
-  <div class="today-tasks">
+<div class="work-tasks">
     <div class="today-title">
       <h1>
-        Today's Tasks!
+        Work Tasks!
       </h1>
       <h2>
         <% const date = new Date(); %> <% const option = {year: 'numeric', month:
@@ -53,19 +51,15 @@
       </ul>
       <div class="task-input">
         <input
-          type="text"
+          type="textarea"
           maxlength="30"
           name="task-name"
-          placeholder="What's your today's goal?"
+          placeholder="What's your working goal?"
         />
         <button type="submit">
-            <div class="horizontal-line"></div>
-            <div class="vertical-line"></div>
+          <div class="horizontal-line"></div>
+          <div class="vertical-line"></div>
         </button>
       </div>
     </div>
   </div>
-
-<%- include("partials/work-tasks.ejs") %>
-
-<%- include("partials/footer.ejs")%>

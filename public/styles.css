@@ -92,7 +92,16 @@ header svg {
   height: 725px;
 }
 
-.main-wrapper {
+@media (min-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.work-tasks,
+.today-tasks {
   width: 21.6875rem;
   max-width: 21.6875rem;
   height: 34rem;
@@ -105,9 +114,18 @@ header svg {
   flex-direction: column;
   align-items: center;
   padding: 1.0625rem;
+  margin: 1.0625rem;
 }
 
-main h1 {
+.today-title,
+.work-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1,
+main h2 {
   font-family: var(--ff-lobster);
   font-size: var(--fs-28);
 }
@@ -162,28 +180,28 @@ main h1 {
 
 .task-input {
   width: 100%;
-  height: 3.625rem;
+  height: 5.25em;
   display: flex;
   background-color: var(--text-boxes-wht);
   border-radius: 0 0 0.625rem 0.625rem;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 1rem;
 }
 
 .task-input input {
   width: 100%;
   height: 80%;
-  margin-left: 1rem;
   border: none;
   font-size: var(--fs-16);
 }
 
-.circle {
-  width: 2.5rem;
+.task-input > button {
+  width: 2.916rem;
   height: 2.5rem;
   background-color: var(--addbox-circle);
+  border: none;
   border-radius: 50%;
-  margin-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
