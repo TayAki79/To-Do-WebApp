@@ -15,10 +15,9 @@
       <ul>
         <li class="task-item">
           <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>      <%# unchecked-checkbox-inner should be toggled to checked-checkbox-inner when clicking %>     
-                                                              <%# checkbox and task name should be crossed %>
+            <div class="unchecked-checkbox-inner"></div>
           </div>
-          <p><%# Task name %></p>                             <%# Task name should be inserted after clicking add button %>
+          <p class="task-item1"></p>
         </li>
         <li class="task-item">
           <div class="unchecked-checkbox-outer">
@@ -51,18 +50,19 @@
           <p class="crossed"><%# Task name %></p>
         </li>
       </ul>
-      <div class="task-input">
+      <form class="task-input" action="/" method="POST">
         <input
+          id="todayTaskInput"
           type="text"
           maxlength="30"
           name="task-name"
           placeholder="What's your today's goal?"
         />
-        <button type="submit">
+        <button type="submit" id="todaySubmit">
             <div class="horizontal-line"></div>
             <div class="vertical-line"></div>
         </button>
-      </div>
+      </form>
     </div>
   </div>
 
