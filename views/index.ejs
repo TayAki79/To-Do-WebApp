@@ -13,59 +13,33 @@
     </div>
     <div class="tasks">
       <ul>
-        <li class="task-item">
-          <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>
-          </div>
-          <p class="task-item1"></p>
-        </li>
-        <li class="task-item">
-          <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>
-          </div>
-          <p<%# Task name %></p>
-        </li>
-        <li class="task-item">
-          <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>
-          </div>
-          <p<%# Task name %></p>
-        </li>
-        <li class="task-item">
-          <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>
-          </div>
-          <p class="crossed"><%# Task name %></p>
-        </li>
-        <li class="task-item">
-          <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>
-          </div>
-          <p class="crossed"><%# Task name %></p>
-        </li>
-        <li class="task-item">
-          <div class="unchecked-checkbox-outer">
-            <div class="unchecked-checkbox-inner"></div>
-          </div>
-          <p class="crossed"><%# Task name %></p>
-        </li>
+        <% if (locals.tasks) { %>
+          <% tasks.forEach((newTask, index) => { %>
+            <li class="task-item">
+              <input id="tasks<% index %>" type="checkbox">
+              <span class="checkmark"></span>
+              <label for="tasks<% index %>" class="task-label">
+                <%= newTask %>
+              </label>
+            </li>
+          <% }); %>
+        <% } %>
       </ul>
-      <form class="task-input" action="/" method="POST">
+      <form class="task-input" action="/submit" method="POST">
         <input
           id="todayTaskInput"
           type="text"
           maxlength="30"
           name="task-name"
           placeholder="What's your today's goal?"
+          required
         />
-        <button type="submit" id="todaySubmit">
-            <div class="horizontal-line"></div>
-            <div class="vertical-line"></div>
-        </button>
+        <input type="submit" id="todaySubmit">
+            <%#<div class="horizontal-line"></div>
+            <div class="vertical-line"></div> %>
+        </input>
       </form>
     </div>
   </div>
-
-<%- include("partials/work-tasks.ejs") %>
 
 <%- include("partials/footer.ejs")%>
