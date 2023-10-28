@@ -14,10 +14,10 @@
     <div class="tasks">
       <ul>
         <% if (locals.tasks) { %>
-          <% tasks.forEach((newTask, index) => { %>
+          <% tasks.forEach(newTask => { %>
             <li class="task-item">
-              <input id="tasks<% index %>" type="checkbox" class="checkbox">
-              <label for="tasks<% index %>" class="task-label">
+              <input type="checkbox" class="checkbox">
+              <label class="task-label">
                 <%= newTask %>
               </label>
             </li>
