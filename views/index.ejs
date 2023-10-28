@@ -3,7 +3,7 @@
   <div class="today-tasks">
     <div class="title">
       <h1>
-        Today's Tasks!
+        Today Tasks!
       </h1>
       <h2>
         <% const date = new Date(); %> <% const option = {year: 'numeric', month:
@@ -33,10 +33,11 @@
           placeholder="What's your today's goal?"
           required
         />
-        <input type="submit">
-            <%#<div class="horizontal-line"></div>
-            <div class="vertical-line"></div> %>
-        </input>
+        <div class="submit-button">
+          <input type="submit">
+          <div class="horizontal-line"></div>
+          <div class="vertical-line"></div>
+        </div>
       </form>
     </div>
   </div>

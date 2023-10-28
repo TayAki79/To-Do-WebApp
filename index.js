@@ -1,3 +1,4 @@
+// Imports
 import express from "express";
 import ejs from "ejs";
 import fs from "fs";
@@ -6,11 +7,13 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Variable Declarations
 const app = express();
 const port = 3000;
 let taskArray = [];
 let workTaskArray = [];
 
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
@@ -26,7 +29,7 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   let newTask = req.body["task-name"];
-  taskArray.unshift(newTask);
+  taskArray.push(newTask);
 
   res.render("index.ejs", { tasks: taskArray });
 });
@@ -38,7 +41,7 @@ app.get("/work", (req, res) => {
 
 app.post("/work/submit", (req, res) => {
   let newWorkTask = req.body["work-task-name"];
-  workTaskArray.unshift(newWorkTask);
+  workTaskArray.push(newWorkTask);
 
   res.render("work.ejs", { workTasks: workTaskArray });
 });

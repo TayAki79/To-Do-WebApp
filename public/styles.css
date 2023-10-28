@@ -140,6 +140,7 @@ main h2 {
 
 .tasks,
 .w-tasks {
+  width: 19.5625rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -207,33 +208,39 @@ main h2 {
   align-items: center;
   padding-inline: 1rem;
 }
-  
+
 #todayTaskInput,
 #workTaskInput {
+  appearance: none;
   width: 100%;
-  height: 80%;
+  height: 100%;
   border: none;
   font-size: var(--fs-16);
   padding-inline: 10px;
   outline: none;
 }
 
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 input[type="submit"] {
-  content: "";
-  width: 2.916rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   background-color: var(--addbox-circle);
   border: none;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: transparent;
+  position: relative;
 }
 
 .horizontal-line {
   width: 2rem;
   height: 0.25rem;
   background-color: var(--addbox-x);
+  position: absolute;
 }
 
 .vertical-line {
