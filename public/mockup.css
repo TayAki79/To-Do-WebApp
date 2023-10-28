@@ -1,0 +1,7 @@
+.task-checkbox:checked + .task-label {
+  text-decoration: line-through;
+}
+
+.work-task-checkbox:checked + .work-task-label {
+  text-decoration: line-through;
+}

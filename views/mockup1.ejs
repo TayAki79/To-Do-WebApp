@@ -1,0 +1,27 @@
+<%- include("partials/mockup-header.ejs") %>
+
+<h1>Work-List</h1>
+<div class="date-wrapper">
+  <h2>
+    <%= new Date().toLocaleDateString("de-DE", { weekday: 'long', year:
+    'numeric', month: 'long', day: 'numeric' }); %>
+  </h2>
+</div>
+<div>
+  <ul>
+    <% if (locals.workTasks) { %> <% workTasks.forEach(newWorkTask => { %>
+    <li>
+      <input type="checkbox" class="work-task-checkbox" />
+      <label class="work-task-label"><%= newWorkTask%></label>
+    </li>
+    <% }) %> <% } %>
+  </ul>
+  <div class="input-wrapper">
+    <form action="/work/submit" method="POST">
+      <input type="text" name="new-work-task" placeholder="New Task" />
+      <input type="submit" value="" />
+    </form>
+  </div>
+</div>
+
+<%- include("partials/mockup-footer.ejs") %>

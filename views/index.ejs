@@ -1,45 +1,39 @@
 <%- include("partials/header.ejs")%>
 
-  <div class="today-tasks">
-    <div class="title">
-      <h1>
-        Today Tasks!
-      </h1>
-      <h2>
-        <% const date = new Date(); %> <% const option = {year: 'numeric', month:
-        'long', day: 'numeric'} %> <%= new Intl.DateTimeFormat('de-DE',
-        option).format(date) %>
-      </h2>
-    </div>
-    <div class="tasks">
-      <ul>
-        <% if (locals.tasks) { %>
-          <% tasks.forEach(newTask => { %>
-            <li class="task-item">
-              <input type="checkbox" class="checkbox">
-              <label class="task-label">
-                <%= newTask %>
-              </label>
-            </li>
-          <% }); %>
-        <% } %>
-      </ul>
-      <form class="task-input" action="/submit" method="POST">
-        <input
-          id="todayTaskInput"
-          type="text"
-          maxlength="30"
-          name="task-name"
-          placeholder="What's your today's goal?"
-          required
-        />
-        <div class="submit-button">
-          <input type="submit">
-          <div class="horizontal-line"></div>
-          <div class="vertical-line"></div>
-        </div>
-      </form>
-    </div>
+<div class="today-tasks">
+  <div class="title">
+    <h1>Today Tasks!</h1>
+    <h2>
+      <% const date = new Date(); %> <% const option = {year: 'numeric', month:
+      'long', day: 'numeric'} %> <%= new Intl.DateTimeFormat('de-DE',
+      option).format(date) %>
+    </h2>
   </div>
+  <div class="tasks">
+    <ul>
+      <% if (locals.tasks) { %> <% tasks.forEach(newTask => { %>
+      <li class="task-item">
+        <input type="checkbox" class="checkbox" />
+        <label class="task-label"> <%= newTask %> </label>
+      </li>
+      <% }); %> <% } %>
+    </ul>
+    <form class="task-input" action="/submit" method="POST">
+      <input
+        id="todayTaskInput"
+        type="text"
+        maxlength="30"
+        name="task-name"
+        placeholder="What's your today's goal?"
+        required
+      />
+      <div class="submit-button">
+        <input type="submit" />
+        <div class="horizontal-line"></div>
+        <div class="vertical-line"></div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <%- include("partials/footer.ejs")%>
