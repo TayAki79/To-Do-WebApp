@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Variable Declarations
 const app = express();
-const port = 3000;
+const port = 10000;
 let taskArray = [];
 let workTaskArray = [];
 
