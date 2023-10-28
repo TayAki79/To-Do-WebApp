@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 let taskArray = [];
+let workTaskArray = [];
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -18,6 +19,7 @@ app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, "views"));
 
+// get and post request today
 app.get("/", (req, res) => {
   res.render("index.ejs", { tasks: taskArray });
 });
@@ -27,7 +29,19 @@ app.post("/submit", (req, res) => {
   taskArray.unshift(newTask);
 
   res.render("index.ejs", { tasks: taskArray });
-})
+});
+
+// get and post request work
+app.get("/work", (req, res) => {
+  res.render("work.ejs", { workTasks: workTaskArray });
+});
+
+app.post("/work/submit", (req, res) => {
+  let newWorkTask = req.body["work-task-name"];
+  workTaskArray.unshift(newWorkTask);
+
+  res.render("work.ejs", { workTasks: workTaskArray });
+});
 
 // Generating an index.html file for github
 app.get("/generate", (req, res) => {

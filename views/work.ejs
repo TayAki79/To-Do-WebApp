@@ -3,7 +3,7 @@
   <div class="today-tasks">
     <div class="title">
       <h1>
-        Today's Tasks!
+        Work Tasks!
       </h1>
       <h2>
         <% const date = new Date(); %> <% const option = {year: 'numeric', month:
@@ -11,25 +11,25 @@
         option).format(date) %>
       </h2>
     </div>
-    <div class="tasks">
+    <div class="w-tasks">
       <ul>
-        <% if (locals.tasks) { %>
-          <% tasks.forEach((newTask, index) => { %>
-            <li class="task-item">
-              <input id="tasks<% index %>" type="checkbox" class="checkbox">
-              <label for="tasks<% index %>" class="task-label">
-                <%= newTask %>
+        <% if (locals.workTasks) { %>
+          <% workTasks.forEach((newWorkTask, index) => { %>
+            <li class="work-task-item">
+              <input id="workTasks<% index %>" type="checkbox" class="work-checkbox">
+              <label for="workTasks<% index %>" class="work-task-label">
+                <%= newWorkTask %>
               </label>
             </li>
           <% }); %>
         <% } %>
       </ul>
-      <form class="task-input" action="/submit" method="POST">
+      <form class="work-task-input" action="/work/submit" method="POST">
         <input
-          id="todayTaskInput"
+          id="workTaskInput"
           type="text"
           maxlength="30"
-          name="task-name"
+          name="work-task-name"
           placeholder="What's your today's goal?"
           required
         />
